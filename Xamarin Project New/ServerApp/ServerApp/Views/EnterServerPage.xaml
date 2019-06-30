@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ServerApp.Views.EnterServerPage">
+    <ScrollView>
+        <StackLayout Spacing="10" Padding="10">
+            
+            <Label Text="Servers"
+                VerticalOptions="Start" 
+                FontSize="Large" />
+            
+            <Label Text="Vul hieronder je server in:"
+                VerticalOptions="Start" 
+                FontSize="Medium" />
+
+            <Button Text="Meer informatie over het monitoren van een eigen server"
+                    Clicked="GetApiInformationButtonClicked" />
+
+            <Label Text="Server naam:"
+                   HorizontalOptions="Start"
+                   FontSize="Small" />
+            <Label Text="*Vul 'Default' in om de applicatie server te gebruiken."
+                   HorizontalOptions="Start"
+                   FontSize="Micro" />
+            <Entry x:Name="ServerNaam" 
+                   Placeholder="Server naam"/>
+
+            <Label Text="URL-adres:"
+                   HorizontalOptions="Start"
+                   FontSize="Small" />
+            <Entry x:Name="IPadres" 
+                   Placeholder="IPadres"/>
+
+            <Label Text="Wachtwoord:"
+                   HorizontalOptions="Start"
+                   FontSize="Small" />
+            <Entry x:Name="Wachtwoord"
+                   Placeholder="Wachtwoord" />
+
+            <Button Text="Invoeren"
+                    Clicked="RegisterNewServerButtonClicked" />
+
+            <Button x:Name="CancelGoToServersButton"
+                    Text="Annuleren, naar serveroverzicht"
+                    Clicked="CancelGoServersButtonClicked" 
+                    IsVisible="False" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

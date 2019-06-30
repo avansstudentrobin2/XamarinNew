@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ServerApp.Views.ApiInformation">
+    <ScrollView>
+        <StackLayout Spacing="10" Padding="10">
+            
+            <Label Text="Api informatie"
+                VerticalOptions="Start" 
+                FontSize="Large" />
+
+            <Label Text="Om je server configurabel te maken vanaf ons systeem moeten de volgende dingen te bereiken zijn:"
+                   VerticalOptions="Start"
+                   FontSize="Small" />
+
+            <Label Text="- Een WebApi url die te bereiken is zonder token authenticatie."
+                   VerticalOptions="Start"
+                   FontSize="Small" />
+            <Label Text="- Een in te stellen wachtwoord. Deze wordt in de query-parameter meegegeven richting de API."
+                   VerticalOptions="Start"
+                   FontSize="Small" />
+            <Label Text="- Een Api response die een HttpActionResult en een lijst met 3 waardes teruggeeft (string)."
+                   VerticalOptions="Start"
+                   FontSize="Small" />
+
+            <Label Text="Deze waardes zijn (ook in deze volgorde):"
+                   VerticalOptions="Start"
+                   FontSize="Small" />
+
+            <Label Text="- Totale server RAM geheugen"
+                   VerticalOptions="Start"
+                   FontSize="Small" />
+
+            <Label Text="- Het op dit moment gebruikte RAM geheugen"
+                   VerticalOptions="Start"
+                   FontSize="Small" />
+
+            <Label Text="- Het op dit moment nog beschikbare RAM geheugen"
+                   VerticalOptions="Start"
+                   FontSize="Small" />
+
+            <Label Text="Deze waardes moeten niet worden afgerond en zijn decimal waardes."
+                   VerticalOptions="Start"
+                   FontSize="Small" />
+
+            <Button Text="Ga terug"
+                    Clicked="GoBackNewServerButtonEventHandler" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

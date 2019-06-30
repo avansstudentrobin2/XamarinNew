@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="ServerApp.Views.ServerDetails">
+    <ScrollView>
+        <StackLayout Spacing="10" Padding="10">
+            
+            <Label Text="Hieronder staan de gegevens van je server:"
+                VerticalOptions="Start" />
+
+            <Label x:Name="serverName" 
+                   Text="{Binding serverName}"
+                   VerticalOptions="Start" />
+            <Label x:Name="serverIp" 
+                   Text="{Binding serverIp}"
+                   VerticalOptions="Start" />
+            <Label x:Name="maximumRam" 
+                   Text="{Binding maximumRam}"
+                   VerticalOptions="Start" />
+
+            <Label Text="Hieronder wordt het RAM van de server bijgehouden." />
+
+            <forms:ChartView x:Name="chartView" HeightRequest="200" WidthRequest="200" />
+
+            <Button Text="Naar serveroverzicht"
+                    Clicked="GoBackButtonClicked" />
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

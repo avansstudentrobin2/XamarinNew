@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ServerApp.Views.ServerPage">
+    <StackLayout Spacing="10" Padding="10">
+
+        <Label Text="Servers"
+                VerticalOptions="Start" 
+                FontSize="Large" />
+
+        <Label Text="Hieronder staat een lijst met al je geregistreerde servers. Klik op een server om deze te openen:"
+                VerticalOptions="Start" 
+                FontSize="Medium" />
+
+        <Grid>
+            <ListView x:Name ="listServers" ItemTapped="SelectServerTabHandler">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Spacing="15" Padding="20">
+                                    <Label Text="{Binding ServerName}" FontSize="Medium" />
+                                    <Label Text="{Binding ServerIp}" FontSize="Micro" />
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+        <Button Text="Nieuwe server registreren"
+                    VerticalOptions="Start"
+                    Clicked="RegisterNewServerButtonClicked" />
+
+        <Button Text="Uitloggen"
+                    VerticalOptions="Start"
+                    Clicked="LogoutButtonClicked" />
+
+    </StackLayout>
+</ContentPage>

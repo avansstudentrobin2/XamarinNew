@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ServerApp.Views.RegisterPage">
+    <ScrollView>
+        <StackLayout Spacing="10" Padding="10">
+            <Label Text="Registreren" 
+               HorizontalOptions="Start"
+                   FontSize="Large"/>
+
+            <Label Text="Registreer je door hieronder de gegevens in te vullen"
+                   HorizontalOptions="Start"
+                   FontSize="Medium"/>
+        
+            <Label Text="Gebruikersnaam:"
+                   HorizontalOptions="Start"
+                   FontSize="Small" />
+            <Label Text="*Gebruikersnaam is altijd een emailadres"
+                   HorizontalOptions="Start"
+                   FontSize="Micro" />
+            <Entry x:Name="Username" 
+                   Placeholder="Gebruikersnaam"/>
+
+            <Label Text="Wachtwoord:"
+                   HorizontalOptions="Start"
+                   FontSize="Small" />
+            <Label Text="*Het wachtwoord moet minimaal 6 karakters bevatten"
+                   HorizontalOptions="Start"
+                   FontSize="Micro" />
+            <Entry x:Name="Password"
+                   IsPassword="True"
+                   Placeholder="Wachtwoord"/>
+
+            <Label Text="Herhaal wachtwoord:"
+                   HorizontalOptions="Start"
+                   FontSize="Small" />
+            <Entry x:Name="CheckPassword"
+                   IsPassword="True"
+                   Placeholder="Herhaal wachtwoord"/>
+
+            <Button Text="Registreren"
+                    Clicked="RegisterNewUserButtonClicked" />
+
+            <Button Text="Annuleren"
+                    Clicked="StopRegisteringButtonClicked" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,1 @@
+C:\Users\robin\source\Workspaces\Xamarin Project New\ServerApp\ServerApp.UWP\ServerApp.UWP.csproj;x86
